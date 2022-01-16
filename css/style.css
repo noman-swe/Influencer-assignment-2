@@ -1,0 +1,347 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&family=Poppins:wght@400;500;700&family=Roboto:wght@500&display=swap');
+
+/* Common CSS */
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.body-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* background-color: slateblue; */
+    width: 86%;
+    margin: 0 auto;
+}
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav li{
+    margin-right: 10px; 
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+/* header */
+
+/* slider */
+.slider-content{
+    display: flex;
+    padding-left: 10px;
+    height: 400px;
+    margin-top: 50px;
+}
+.slider-article{
+    /* background-color: thistle; */
+    position: relative;
+    width: 50%;
+}
+.slider-details{
+    padding-bottom: 150px;
+}
+.prebook-btn{
+    /* margin-top: 200px; */
+    position: absolute;
+    bottom: 75px;
+}
+.prebook-btn span{
+    padding-left: 15px;
+}
+.btn{
+    background-color: #EB3E3D;
+    padding: 10px 30px;
+    color: #ffff;
+    border: 0;
+    border-radius: 25px;
+}
+
+/* img */
+.slider-img{
+    width: 50%;
+    position: relative;    
+}
+.slider-img img{
+    position: absolute;
+    right: 0;
+}
+
+.slider-img>img:hover{
+    /* transform: scale(1); */
+    
+    transform: rotate(50deg);
+    transition: 1s;
+}
+
+/* slider */
+
+/* Sponsor */
+.sponsor{
+    display: flex;
+    width: 90%;
+    border: 1px solid dimgrey;
+    padding: 10px 20px;
+    margin: 50px auto;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 50px;
+
+}
+
+/* Sponsor */
+
+
+/* popular items */
+.popular-container{
+    /* background-color: gray; */
+    width: 85%;
+    margin: 0 auto;
+}
+.popular-title{
+    text-align: center;
+}
+.popular-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-column-gap: 1.5em; 
+    grid-row-gap: 1.5em;
+    position: relative;
+    padding-bottom: 100px;
+    
+    
+}
+.popular-item{
+    width: 100%;
+    border-radius: 7px;
+    background-color: #ffff;
+    box-shadow: 10px 9px 19px -5px rgba(0,0,0,0.71);
+    -moz-box-shadow: 10px 9px 19px -5px rgba(0,0,0,0.71);
+
+
+}
+
+.item-content {
+    padding: 10px; 
+    text-align: center;
+    border-radius: 7px;
+}
+
+/* stars */
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+
+.see-more{
+    position: absolute;
+    color: #EB3E3D;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 30px;
+}
+
+/* join me */
+.join-section{
+    width: 90%;
+    margin: 0 auto;
+    background-image: url('../images/treaming-station.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 20px;
+}
+.contact-title{
+    background-color: #000;
+    opacity: 0.7;
+    color: #ffff;
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+/* footer */
+footer{
+    width: 100%;
+    background-color: black;
+    color: #ffff;
+    margin-top: 50px;
+    
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    line-height: 10px;
+}
+
+/* Media queries */
+/* mobile devices */
+@media only screen and (max-width:688px) {
+    .body-wrapper{
+        width: 100%;
+    }
+    header{
+        width: 100%;      
+    }
+    header >nav > ul{
+        display: none;
+    }
+
+    /* slider */
+    .slider-content{
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+        height: auto;
+    }
+    .slider-img, #img-camera {
+        width: 100%;
+        order: 1;
+        position: relative !important;
+        height: auto;   
+    }
+    .slider-img> img{
+        position: static !important;
+        width: 70%;
+    }
+    .slider-article{
+        width: 100%;  
+        order: 2;
+        text-align: center;
+    }
+
+    .slider-title, .slider-details{
+        width: 70%;
+        text-align: justify;
+    }
+
+    .sponsor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        margin: 0px;
+        padding-bottom: 70px;
+    }
+   /* Popular */
+   .popular-items{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin: 0 auto;
+   }
+    .join-section{
+        width: 70%;
+        margin-bottom: 100px;
+    }
+    .footer{
+        display: inline-block;
+        background-color: #000;
+        padding: 20px 0px;
+    }
+    .footer-content >p{
+        font-size: 14px;
+    }
+
+}
+/* Media queries */
+/* tablet */
+@media only screen and (max-width:992px) {
+    .body-wrapper{
+        width: 100%;
+    }
+    header{
+        width: 100%;      
+    }
+    .logo-name{
+        padding-left: 120px;
+        padding-top: 20px;
+    }
+    header >nav > ul{
+        display: none;
+    }
+
+    /* slider */
+    .slider-content{
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+        height: auto;
+    }
+    .slider-img, #img-camera {
+        width: 100%;
+        order: 1;
+        position: relative !important;
+        height: auto;   
+        padding-left: 50px;
+    }
+    .slider-img> img{
+        position: static !important;
+        width: 70%;
+        padding-left: 150px;
+    }
+    .slider-article{
+        width: 100%;  
+        order: 2;
+        text-align: justify;
+        padding-left: 75px;
+    }
+
+    .slider-title, .slider-details{
+        width: 70%;
+        padding-left: 50px;
+    }
+    .prebook-btn{
+        margin-left: 50px;
+    }
+
+    .sponsor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        margin: 0px;
+        padding-bottom: 70px;
+    }
+   /* Popular */
+   .popular-items{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       padding-left: 100px;
+       
+   }
+   .joins{
+       width: 100%;
+   }
+    .join-section{
+        width: 70%;
+        margin-bottom: 50px;
+        margin: 0 auto;
+    }
+    .footer{
+        width: 100%;
+        display: inline-block;
+        background-color: #000;
+        
+    }
+    .footer-content{
+        margin-left: 100px;
+        padding-bottom: 50px 0px;
+    }
+
+}
